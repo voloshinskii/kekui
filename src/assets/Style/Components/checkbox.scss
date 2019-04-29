@@ -11,6 +11,7 @@
   user-select: none;
   cursor: pointer;
   font-size: 16px;
+  display: flex;
 }
 
 .checkbox label .text{
@@ -20,8 +21,8 @@
 .checkbox label:before {
   vertical-align: bottom;
   content: "";
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   background: transparent;
   opacity: 1;
   margin-right: 10px;

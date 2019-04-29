@@ -7,21 +7,6 @@ import RawInput from '../RawInput/RawInput';
  */
 
 export default class Checkbox extends Component {
-  constructor(props) {
-    super(props);
-    // Don't call this.setState() here!
-    this.state = {
-      active: false,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick({target}){
-    var active = !this.state.active;
-    active ? console.log("checkbox - on") : console.log("checkbox - off");
-    this.setState({active: active});
-  }
-
   static propTypes = {
     /** Checkbox label */
     label: PropTypes.string,
@@ -31,33 +16,30 @@ export default class Checkbox extends Component {
     id: PropTypes.number,
     /** Component name */
     name: PropTypes.string,
-    /** Input value */
-    value: PropTypes.string,
+    /** Checkbox value */
+    checked: PropTypes.bool,
     /** onChange function */
     onChange: PropTypes.func,
-    /** Input placeholder */
-    placeholder: PropTypes.string,
-    /** Input type */
-    type: PropTypes.string,
     /** Theme style */
     theme: PropTypes.oneOf(['dark', 'light']),
   }
   static defaultProps = {
     className: null,
-    theme: 'dark'
+    theme: 'dark',
+    checked: undefined,
   }
 
   render() {
     return (
-      <div className={`checkbox light-blue ${this.props.theme}`}>
+      <div className={`checkbox light-blue ${this.props.theme} ${this.props.className}`}>
         <input
           id="checkbox"
           type="checkbox"
           style={{display: "none"}}
-          checked={this.state.active}
-          onChange={this.handleClick}
+          checked={this.props.checked}
+          onChange={this.props.onChange}
         />
-        <label htmlFor="checkbox">Make my profile visible</label>
+        <label htmlFor="checkbox">{this.props.label}</label>
       </div>
     );
   }

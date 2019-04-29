@@ -23,7 +23,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        loader: 'svg-inline-loader'
+        loader: "url-loader?limit=10000&mimetype=image/svg+xml"
       },
     ]
   },

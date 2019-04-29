@@ -1,5 +1,5 @@
 Checkbox example:
 
 ```js
-<Checkbox/>
+<Checkbox label="Я согласен с политикой конфиденциальности"/>
 ```

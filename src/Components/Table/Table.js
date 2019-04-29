@@ -10,55 +10,70 @@ export default class Table extends Component {
     /** Theme style */
     theme: PropTypes.oneOf(['dark', 'light']),
     /** Default React className */
-    className: PropTypes.string
-    /** Message text */
+    className: PropTypes.string,
+    /** Table headers */
+    headers: PropTypes.array,
+    /** Table Content */
+    content: PropTypes.array,
   }
   static defaultProps = {
     className: null,
-    theme: 'dark'
+    theme: 'dark',
+    headers: [],
+    content: [[]]
+  }
+
+  constructor(props) {
+    super(props)
+    this.state ={
+      headers: undefined,
+    }
+  }
+
+  componentDidMount(){
+    var headers = this.props.headers.map((header, index) =>
+      <th key={`table-header-${index}`}>{header}</th>
+    );
+
+    var content =
+      this.props.content.map((content, index) =>
+        <tr key={`table-tr-${index}`}>
+          {
+            content.map((item, index) =>
+              <td key={`table-td-${index}`}>
+                {item}
+              </td>
+            )
+          }
+        </tr>
+      );
+
+    this.setState({headers: headers, content: content});
+
   }
 
   render() {
     return (
-      <table className="table light">
+      <table className={`table ${this.props.theme}`}>
         <thead>
           <tr>
-            <th scope="col">Company</th>
-            <th scope="col">Contact</th>
-            <th scope="col">Country</th>
+            { this.state.headers && this.state.headers }
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td data-label="Company">Alfreds Futterkiste</td>
-            <td data-label="Contact">Maria Anders</td>
-            <td data-label="Country">Germany</td>
-          </tr>
-          <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-          </tr>
-          <tr>
-            <td>Ernst Handel</td>
-            <td>Roland Mendel</td>
-            <td>Austria</td>
-          </tr>
-          <tr>
-            <td>Island Trading</td>
-            <td>Helen Bennett</td>
-            <td>UK</td>
-          </tr>
-          <tr>
-            <td>Laughing Bacchus Winecellars</td>
-            <td>Yoshi Tannamuri</td>
-            <td>Canada</td>
-          </tr>
-          <tr>
-            <td>Magazzini Alimentari Riuniti</td>
-            <td>Giovanni Rovelli</td>
-            <td>Italy</td>
-          </tr>
+          {
+            this.props.content.map((content, index) =>
+              <tr key={`table-tr-${index}`}>
+                {
+                  content.map((item, index) =>
+                    <td key={`table-td-${index}`}>
+                      {item}
+                    </td>
+                  )
+                }
+              </tr>
+            )
+          }
         </tbody>
       </table>
     );
