@@ -22,24 +22,42 @@ export default class Checkbox extends Component {
     onChange: PropTypes.func,
     /** Theme style */
     theme: PropTypes.oneOf(['dark', 'light']),
+    /** Checkbox id. Random as default */
+    id: PropTypes.string,
+    /** Checkbox color */
+    color: PropTypes.oneOf(['light-blue', 'default'])
   }
   static defaultProps = {
     className: null,
     theme: 'dark',
     checked: undefined,
+    id: false,
+    color: 'default',
+  }
+
+  constructor(props) {
+    super(props)
+    this.state ={
+      id: 1,
+    }
+  }
+
+  componentDidMount(){
+    var id = (this.props.id) ? this.props.id : Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    this.setState({id: id});
   }
 
   render() {
     return (
-      <div className={`checkbox light-blue ${this.props.theme} ${this.props.className}`}>
+      <div className={`field checkbox ${this.props.color} ${this.props.theme} ${this.props.className}`}>
         <input
-          id="checkbox"
+          id={this.state.id}
           type="checkbox"
           style={{display: "none"}}
           checked={this.props.checked}
           onChange={this.props.onChange}
         />
-        <label htmlFor="checkbox">{this.props.label}</label>
+        <label htmlFor={this.state.id}>{this.props.label}</label>
       </div>
     );
   }

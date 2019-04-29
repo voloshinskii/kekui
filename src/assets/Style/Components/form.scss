@@ -11,15 +11,16 @@
   &.ext-padding{
     padding: 45px 25px;
   }
-  & .field{
-    @extend .m-15;
-  }
   & p{
     @extend .m-35;
   }
   body.light &{
     background-color: white;
   }
+}
+
+.field{
+  @extend .m-15;
 }
 
 label{
@@ -62,6 +63,30 @@ label{
     font-size: 12pt;
   }
 }
+
+/*--------------
+   Input types
+  --------------*/
+
+@mixin InputType($color, $tcolor) {
+  border: 1.4px solid $color;
+  background-color: lighten($color, 33%);
+  color: $tcolor;
+}
+
+.input.error{
+  @include InputType($color_CP, black);
+}
+
+.input.warning{
+  @include InputType($color_LY, black);
+}
+
+
+.input.success{
+  @include InputType($color_LG, black);
+}
+
 
 /*--------------
       Field
