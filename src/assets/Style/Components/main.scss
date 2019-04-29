@@ -1,0 +1,81 @@
+$primary-font: 'Roboto', sans-serif;
+
+body{
+  margin: 0;
+  padding: 0;
+  background: $color_CG;
+  color: $color_WS;
+  font-family: $primary-font;
+  &.light{
+      background: $color_WS;
+      color: black;
+  }
+}
+
+.content{
+  padding: 0 15%;
+}
+
+@media (max-width: 1040px) {
+  .content {
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 0 3%;
+  }
+}
+
+.vh-100{
+  min-height: 100vh;
+}
+
+body,html,#root{
+  @extend .vh-100;
+}
+
+a{
+  text-decoration: $url_decoration;
+  color: $url_color_dark;
+  transition: 0.2s;
+  &:hover{
+    color: darken($url_color_dark,20%);
+    transition: 0.2s
+  }
+  body.light &{
+    color: $url_color_light;
+  }
+  body.light &:hover{
+    color: darken($url_color_light,20%);
+  }
+  &.td--underline{
+    text-decoration: underline;
+    vertical-align: bottom;
+  }
+
+  &.td--none{
+    text-decoration: none;
+  }
+}
+
+.displayCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &.vertical{
+    resize: vertical;
+  }
+}
+
+.flexrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.withshadow{
+  box-shadow: 0 12px 30px 0 rgba(35,39,42,.1);
+}

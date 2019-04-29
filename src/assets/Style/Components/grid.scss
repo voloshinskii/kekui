@@ -1,0 +1,17 @@
+.grid{
+  display: grid;
+  width: 100%;
+  grid-gap: 20px;
+  &.features{
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  &.form-banner{
+    grid-template-columns: 450px 1fr;
+  }
+}
+
+@media (max-width: 1040px) {
+  .grid.form-banner {
+    grid-template-columns: 1fr;
+  }
+}

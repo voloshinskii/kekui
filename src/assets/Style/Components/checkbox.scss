@@ -1,0 +1,67 @@
+/* CHECKBOX START */
+
+.checkbox{
+  background: transparent;
+  height: auto;
+}
+
+.checkbox label {
+  margin: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.checkbox label .text{
+  vertical-align: bottom;
+}
+
+.checkbox label:before {
+  vertical-align: bottom;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  opacity: 1;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #9098A9;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+  transition-delay: 0.1s;
+}
+
+.checkbox label:hover::before {
+
+  border: 1px solid $color_LG;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+
+}
+
+.checkbox input:checked + label:before {
+  background: $color_LG !important;
+  border-color: $color_LG !important;
+  animation: wave 0.4s ease !important;
+  background-image: url("./Images/checkmark.svg") !important;
+}
+
+.checkbox.light-blue label:hover::before {
+
+  border: 1px solid $color_LBB;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+
+}
+
+.checkbox.light-blue input:checked + label:before {
+  background: #7289da !important;
+  border-color: #7289da !important;
+  background-image: url("./Images/checkmark.svg") !important;
+}
+
+
+/* CHECKBOX END */

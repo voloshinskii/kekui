@@ -1,0 +1,54 @@
+
+/* CARD START */
+
+
+.block{
+  box-sizing: border-box;
+  background-color: $color_WS;
+  width: 100%;
+  padding: 25px;
+  color: black;
+
+  &.shadowed{
+    box-shadow: 0 0 10px 3px rgba(0,0,0,.2);
+  }
+
+  &.round{
+    border-radius: 5px;
+  }
+
+  &.p-10{
+    padding: 10px 25px;
+  }
+
+}
+
+.block .title{
+  @extend .m-0;
+  @extend .m-10;
+}
+
+.block .description{
+  @extend .m-0;
+  @extend .m-25;
+  color: $color_gray;
+}
+
+.block p{
+  font-size: 18px;
+}
+
+/* BLOCK END */
+
+.accordeon{
+  background-color: #f6f4f3;
+  height: 0px;
+  display: none;
+  transition: 0.5s;
+}
+
+.accordeon.show{
+  height: auto;
+  display: block;
+  transition: 0.5s;
+}

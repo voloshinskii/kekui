@@ -1,0 +1,25 @@
+
+.line{
+  background-color: #ebebeb;
+  border-radius: 5px;
+}
+
+.demo.line--fat{
+  @extend .line;
+  height: 25px;
+  width: 50%;
+}
+
+.demo.line--tall{
+  @extend .line;
+  height: 20px;
+  width: 95%;
+}
+
+.demo.black{
+  background-color: #464444;
+}
+
+.demo.a-bit-black{
+  background-color: #d0cbcb;
+}

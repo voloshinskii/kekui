@@ -1,0 +1,128 @@
+
+/* BUTTON START */
+
+@mixin buttonColored($color, $tcolor) {
+ background: $color;
+ color: $tcolor;
+}
+
+@mixin buttonHover($color) {
+ &:hover{
+   background-color: darken($color, 15%);
+ };
+}
+
+.button{
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  border: 1.4px solid rgba(34,36,38,0.15);
+  border-radius: 5px;
+  padding: 10px 18px;
+  transition: 0.3s;
+  @include buttonColored(#e0e1e2, black);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .button {
+    font-size: 12pt;
+  }
+}
+
+.button--no-style{
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.button.dis-border{
+  border: none;
+}
+
+.button.sq{
+  border-radius: 3px;
+}
+
+.button:hover{
+  cursor: pointer;
+  transition: 0.3s;
+  @include buttonHover(white);
+}
+
+.button.fluid{
+  width: 100%;
+}
+
+.button.right{
+  margin-left: auto;
+}
+
+/*--------------
+      Jewel
+  --------------*/
+
+.button.jewel{
+  @include buttonColored($color_JWL, white);
+  @include buttonHover($color_JWL);
+}
+
+
+/*--------------
+      Pink
+  --------------*/
+
+.button.pink{
+  @include buttonColored($color_CP, white);
+  @include buttonHover($color_CP);
+}
+
+/*--------------
+    Light-blue
+  --------------*/
+
+.button.light-blue{
+  @include buttonColored($color_LBB, white);
+  @include buttonHover($color_LBB);
+}
+
+/*--------------
+   Light-green
+  --------------*/
+
+.button.light-green{
+  @include buttonColored($color_LG, white);
+  @include buttonHover($color_LG);
+}
+
+/*--------------
+      Purple
+  --------------*/
+
+.button.purple{
+  @include buttonColored($color_MRP, white);
+  @include buttonHover($color_MRP);
+}
+
+/*--------------
+   Light-yellow
+  --------------*/
+
+.button.light-yellow{
+  @include buttonColored($color_LY, black);
+  @include buttonHover($color_LY);
+}
+
+
+/*--------------
+      SIZES
+  --------------*/
+
+  .button.big{
+    font-size: 20px;
+  }
+
+/* BUTTON END */

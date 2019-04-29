@@ -1,0 +1,23 @@
+
+/* PROPERTIES START */
+
+.m-0{
+  margin: 0;
+}
+
+@for $i from 0 through 10 {
+  .m-#{$i * 5} { margin-bottom: 5px * $i; }
+}
+
+@for $i from 0 through 10 {
+  .p-#{$i * 5} { padding: 5px * $i; }
+}
+
+/* PROPERTIES END */
+
+
+/* A PROPS */
+
+$url_decoration:    none;
+$url_color_dark:    #3d7ab6;
+$url_color_light:   #3d7ab6;

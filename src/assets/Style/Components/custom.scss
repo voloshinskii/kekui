@@ -1,0 +1,22 @@
+.card.item{
+  height: 180px;
+}
+
+.card.item .image{
+  height: 50%;
+}
+
+.card.item .description{
+  height: 50%;
+}
+
+.card.item .description .price{
+  font-weight: bold;
+  border-radius: 22px;
+  padding: 8px 12px;
+  @extend .withshadow;
+  &.light-blue{
+    background-color: $color_LBB;
+    color: white;
+  }
+}

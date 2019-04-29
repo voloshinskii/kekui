@@ -1,0 +1,76 @@
+
+.form{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 25px;
+  color: black;
+  &.default-style{
+    background: $color_WS;
+    border-radius: 5px;
+  }
+  &.ext-padding{
+    padding: 45px 25px;
+  }
+  & .field{
+    @extend .m-15;
+  }
+  & p{
+    @extend .m-35;
+  }
+  body.light &{
+    background-color: white;
+  }
+}
+
+label{
+  font-size: 15px;
+  display: inline-block;
+  @extend .m-5;
+  color: black;
+}
+
+@for $i from 2 through 4 {
+  .fields.i-#{$i} {
+    @extend .flexrow;
+    @extend .m-15;
+    & .field{
+      width: (100% - 5%) / $i;
+    }
+  }
+}
+
+.input{
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: white;
+  border: 1.4px solid rgba(34,36,38,0.15);
+  padding: 8px 18px;
+  transition: 0.3s;
+  &:focus{
+    outline: none;
+    border: 1.4px solid transparentize($color_LBB, 0.25);
+    transition: 0.3s;
+  }
+  &.fluid{
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .input {
+    font-size: 12pt;
+  }
+}
+
+/*--------------
+      Field
+  --------------*/
+
+.field.flex{
+  display: flex;
+}
+
+.field.m-0{
+  margin-bottom: 0;
+}

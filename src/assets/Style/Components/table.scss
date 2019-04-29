@@ -1,0 +1,19 @@
+.table{
+  color: white;
+  color: white;
+  border-spacing: 15px;
+  table-layout: auto;
+  width: 100%;
+  & th{
+    font-weight: normal;
+    text-align: left;
+    padding-bottom: 15px;
+  }
+}
+
+.table.light, .body.light .table{
+  color: black;
+  & th{
+    color: #a7a6ae;
+  }
+}

@@ -1,0 +1,9 @@
+.arrow{
+  width: 16px;
+  transition: 0.5s;
+}
+
+.arrow.to-right{
+  transform: rotate(-90deg);
+  transition: 0.5s;
+}

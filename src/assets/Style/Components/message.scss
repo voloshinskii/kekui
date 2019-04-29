@@ -1,0 +1,40 @@
+
+/* WARNS START */
+
+@mixin MessageType($color, $tcolor) {
+ border: 1px solid $color;
+ background-color: lighten($color, 33%);
+ color: $tcolor;
+}
+
+.message{
+  @extend .m-15;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: darken($color_WS, 9%);
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid grey;
+  & p{
+    margin: 0;
+  }
+  &.light, body.light &{
+    color: black;
+  }
+}
+
+/*  Types */
+
+.body.light .message.error, .message.light.error{
+  @include MessageType($color_CP, black);
+}
+
+.body.light .message.success, .message.light.success{
+  @include MessageType($color_LG, black);
+}
+
+.body.light .message.warning, .message.light.warning{
+  @include MessageType($color_LY, black);
+}
+
+/* WARNS END */

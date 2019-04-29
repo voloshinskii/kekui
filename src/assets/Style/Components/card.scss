@@ -1,0 +1,127 @@
+
+/* CARD START */
+
+@mixin cardColored($color, $tcolor) {
+ background: $color;
+ color: $tcolor;
+}
+
+@mixin cardHover($color) {
+ &:hover{
+   box-shadow: 0 0 25px transparentize($color, 0.65);
+   cursor: pointer;
+ };
+}
+
+.card{
+  min-height: 145px;
+  background: #fbfbfd;
+  color: black;
+  border-radius: 5px;
+  padding: 20px;
+  transition: 0.3s;
+  @include cardColored(white, black);
+  &.hover{
+    @include cardHover(white);
+  }
+}
+
+.card p{
+  font-size: 18px;
+}
+
+.card:hover{
+  transition: 0.3s;
+}
+
+.card .title{
+  margin-top: 0px;
+}
+
+/*--------------
+      Jewel
+  --------------*/
+
+  .card.jewel{
+    @include cardColored($color_JWL, white);
+
+    &.hover{
+      @include cardHover($color_JWL);
+    }
+  }
+
+/*--------------
+      Pink
+  --------------*/
+
+.card.pink{
+  @include cardColored($color_CP, white);
+
+  &.hover{
+    @include cardHover($color_CP);
+  }
+}
+
+/*--------------
+    Light-blue
+  --------------*/
+
+.card.light-blue{
+  @include cardColored($color_LBB, white);
+
+  &.hover{
+    @include cardHover($color_LBB);
+  }
+}
+
+/*--------------
+   Light-green
+  --------------*/
+
+.card.light-green{
+  @include cardColored($color_LG, white);
+
+  &.hover{
+    @include cardHover($color_LG);
+  }
+}
+
+/*--------------
+      Purple
+  --------------*/
+
+.card.purple{
+  @include cardColored($color_MRP, white);
+
+  &.hover{
+    @include cardHover($color_MRP);
+  }
+}
+
+/*--------------
+   Light-yellow
+  --------------*/
+
+.card.light-yellow{
+  @include cardColored($color_LY, black);
+
+  &.hover{
+    @include cardHover($color_LY);
+  }
+}
+
+/*--------------
+      SIZING
+  --------------*/
+
+.card.fluid{
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+.card.mini{
+  width: 250px;
+}
+
+/* CARD END */
