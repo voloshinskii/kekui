@@ -10,12 +10,14 @@ export default class Grid extends Component {
     /** Theme style */
     theme: PropTypes.oneOf(['dark', 'light']),
     /** Default React className */
-    className: PropTypes.string
-    /** Message text */
+    className: PropTypes.string,
+    /** Grid type */
+    type: PropTypes.oneOf([null, 'features', 'form-banner', 'featured-sales']),
   }
   static defaultProps = {
     className: null,
-    theme: 'dark'
+    theme: 'dark',
+    type: null,
   }
 
   render() {
