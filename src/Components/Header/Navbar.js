@@ -13,7 +13,7 @@ export default class Navbar extends Component {
     className: PropTypes.string,
   }
   static defaultProps = {
-    position: 'right',
+    position: 'left',
     className: null,
   }
 
