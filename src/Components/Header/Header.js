@@ -26,6 +26,10 @@ export default class Header extends Component {
   render() {
     return (
       <div className={`header ${this.props.className}`}>
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
         <header className="headerInner">
           {this.props.children}
         </header>
