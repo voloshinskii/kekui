@@ -1,41 +1,9 @@
 import React, { Component } from 'react';
 
-class Header extends Component {
-
-  render() {
-    return (
-        <div className="header">
-          <header className="headerInner">
-            <Navbar>
-              <NavLink href="/">Главная</NavLink>
-            </Navbar>
-            <Navbar className="right">
-              <NavLink href="/">Вход</NavLink>
-            </Navbar>
-          </header>
-        </div>
-    );
-  }
-}
-
 const Content = ({className, children}) => (
   <div className={`content ${ className }`}>
       {children}
   </div>
-);
-
-const Navbar = ({className, children}) => (
-  <ul className={`navbar ${ className }`}>
-      {children}
-  </ul>
-);
-
-const NavLink = ({className, href, children}) => (
-  <li>
-    <a href={href}>
-      {children}
-    </a>
-  </li>
 );
 
 const DisplayCenter = ({className, children}) => (
@@ -58,7 +26,6 @@ const Block = ({className, children}) => (
 );
 
 export {
-  Header,
   DisplayCenter,
   Grid,
   Block,

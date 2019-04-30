@@ -23,6 +23,10 @@
   @extend .m-15;
 }
 
+.field.m-0{
+  margin-bottom: 0;
+}
+
 label{
   font-size: 15px;
   display: inline-block;

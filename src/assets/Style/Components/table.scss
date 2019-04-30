@@ -8,6 +8,9 @@
     text-align: left;
     padding-bottom: 15px;
   }
+  & tbody tr{
+    @extend .m-15;
+  }
 }
 
 .table.light, .body.light .table{

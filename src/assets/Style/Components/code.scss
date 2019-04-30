@@ -1,0 +1,9 @@
+.code{
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.body.light .code, .code.light{
+  background: rgba(0,0,0,.05);
+  color: black;
+}
