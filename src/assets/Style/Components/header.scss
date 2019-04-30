@@ -26,8 +26,13 @@ body.light .header ul{
   padding: 0;
   display: flex;
   & li{
-    margin-right: 20px;
+    margin-right: 35px;
   }
+
+  & li:last-child{
+    margin-right: 0;
+  }
+
   &.right{
     margin-left: auto;
   }
