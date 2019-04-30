@@ -22,7 +22,7 @@ export default class Grid extends Component {
 
   render() {
     return (
-        <div className={`grid ${this.props.className} ${this.props.theme}`}>
+        <div className={`grid ${this.props.className} ${this.props.theme} ${this.props.type}`}>
           {this.props.children}
         </div>
     );

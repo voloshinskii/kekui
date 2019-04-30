@@ -12,12 +12,6 @@ const DisplayCenter = ({className, children}) => (
   </div>
 );
 
-const Grid = ({className, children}) => (
-  <div className={`grid ${ className }`}>
-      {children}
-  </div>
-);
-
 
 const Block = ({className, children}) => (
   <div className={`block ${ className }`}>
@@ -27,7 +21,6 @@ const Block = ({className, children}) => (
 
 export {
   DisplayCenter,
-  Grid,
   Block,
   Content
 }

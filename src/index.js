@@ -13,13 +13,14 @@ export { default as Table} from './Components/Table/Table';
 export { default as Header} from './Components/Header/Header';
 export { default as Navbar} from './Components/Header/Navbar';
 export { default as NavLink} from './Components/Header/NavLink';
+export { default as Grid} from './Components/Grid/Grid';
 
-import {DisplayCenter, Grid, Block, Content} from './Components/Main';
+import {DisplayCenter, Block, Content} from './Components/Main';
 import {FewInputs, Button, RawButton, Form} from './Components/Form';
 import {H1, H2, H3, H4, H5, H6} from './Components/TextStyling';
 
 export {
   FewInputs, Button, RawButton, Form,
-  DisplayCenter, Grid, Block, Content,
+  DisplayCenter, Block, Content,
   H1, H2, H3, H4, H5, H6
 };
