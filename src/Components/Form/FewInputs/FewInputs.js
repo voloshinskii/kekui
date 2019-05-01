@@ -34,7 +34,7 @@ export default class FewInputs extends Component {
     return (
       <div>
         <label>{this.props.label}</label>
-        <div className={`fields i-${this.state.inputslist.length}`}>
+        <div className={`fields i-${this.props.inputs.length}`}>
           {this.renderInputs()}
         </div>
       </div>
