@@ -3,7 +3,7 @@
 }
 
 .header .logo{
-  margin: 1.2em 20px 1.2em 0;
+  margin: 1em 20px 1em 0;
   display: inline-block;
   font-weight: bold;
   width: auto;
@@ -105,8 +105,13 @@
     -webkit-touch-callout: none;
   }
 
+  .header .logo{
+    margin: 0;
+  }
+
   .span-holder{
     display: inline-block;
+    margin-right: 20px;
   }
 
   .header .span-holder span
