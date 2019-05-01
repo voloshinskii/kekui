@@ -27,7 +27,7 @@
   margin-bottom: 0;
 }
 
-.field .error{
+.field .error-text{
   margin-top: 5px;
   color: darken( $color_CP, 25% );
 
@@ -77,23 +77,21 @@ label{
    Input types
   --------------*/
 
-@mixin InputType($color, $tcolor) {
-  border: 1.4px solid $color;
-  background-color: lighten($color, 33%);
-  color: $tcolor;
+@mixin InputType($color) {
+  background-color: transparentize($color, 0.25);
 }
 
 .input.error{
-  @include InputType($color_CP, black);
+  @include InputType($color_CP);
 }
 
 .input.warning{
-  @include InputType($color_LY, black);
+  @include InputType($color_LY);
 }
 
 
 .input.success{
-  @include InputType($color_LG, black);
+  @include InputType($color_LG);
 }
 
 

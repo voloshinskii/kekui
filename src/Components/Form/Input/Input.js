@@ -58,7 +58,7 @@ export default class Input extends Component {
                     type={this.props.type}
                     theme={this.props.theme}
         />
-        <div className="error">{this.props.error}</div>
+        <div className="error-text">{this.props.error}</div>
         </div>
     );
   }
