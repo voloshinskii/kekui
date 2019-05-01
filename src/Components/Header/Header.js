@@ -13,6 +13,8 @@ export default class Header extends Component {
   static propTypes = {
     /** children */
     children: PropTypes.any,
+    /** Logo */
+    logo: PropTypes.any,
     /** Default React className */
     className: PropTypes.string,
     /** Theme style */
@@ -27,6 +29,9 @@ export default class Header extends Component {
     return (
       <div className={`header ${this.props.className}`}>
         <input type="checkbox" />
+        <span className="logo">
+          {this.props.logo}
+        </span>
         <div className="span-holder">
           <span></span>
           <span style={{marginBottom:"-22px"}}></span>
