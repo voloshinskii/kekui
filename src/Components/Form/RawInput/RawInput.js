@@ -58,8 +58,8 @@ export default class RawInput extends Component {
                className={`input ${this.props.className} ${this.props.theme}`}
                placeholder={this.props.placeholder}
                type={this.props.type}
-               error={this.props.error}
         />
+      <div className="error-text">{this.props.error}</div>
       </div>
     );
   }
