@@ -71,8 +71,8 @@
   {
     display: block;
     position: relative;
-    top: 50px;
-    left: 50px;
+    top: 15px;
+    left: 15px;
 
     z-index: 1;
 
@@ -150,7 +150,7 @@
     position: absolute;
     width: 300px;
     margin: -100px 0 0 -90px;
-    padding: 50px;
+    padding: 100px;
     padding-top: 125px;
 
     background: #ededed;
@@ -166,6 +166,10 @@
   {
     padding: 10px 0;
     font-size: 22px;
+  }
+
+  .navbar{
+    list-style-type: none;
   }
 
   .header input:checked ~ ul
