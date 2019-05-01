@@ -10,8 +10,9 @@
   -webkit-user-select: none;
   user-select: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 100%;
   display: flex;
+  line-height: 20px;
 }
 
 .checkbox label .text{
@@ -19,10 +20,9 @@
 }
 
 .checkbox label:before {
+  box-sizing: border-box;
   vertical-align: bottom;
   content: "";
-  width: 15px;
-  height: 15px;
   background: transparent;
   opacity: 1;
   margin-right: 10px;
@@ -33,6 +33,20 @@
   vertical-align: middle;
   transition: all 0.2s ease;
   transition-delay: 0.1s;
+}
+
+@media (min-width: 1040px) {
+  .checkbox label:before{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .checkbox label:before{
+    width: 26px;
+    height: 22px;
+  }
 }
 
 .checkbox label:hover::before {
