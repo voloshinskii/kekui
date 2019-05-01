@@ -11,12 +11,13 @@
   user-select: none;
   cursor: pointer;
   font-size: 100%;
-  display: flex;
+  display: block;
   line-height: 20px;
 }
 
-.checkbox label .text{
-  vertical-align: bottom;
+.checkbox label span{
+  display: inline;
+  vertical-align: top;
 }
 
 .checkbox label:before {
@@ -44,7 +45,7 @@
 
 @media (max-width: 1040px) {
   .checkbox label:before{
-    width: 26px;
+    width: 22px;
     height: 22px;
   }
 }
