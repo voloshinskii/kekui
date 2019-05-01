@@ -30,11 +30,9 @@ export default class Header extends Component {
         <span></span>
         <span></span>
         <span></span>
-        <header className="headerInner">
-          <ul className="header-in">
-            {this.props.children}
-          </ul>
-        </header>
+        <ul className="header-in">
+          {this.props.children}
+        </ul>
       </div>
     );
   }

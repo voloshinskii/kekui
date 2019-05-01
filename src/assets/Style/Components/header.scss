@@ -4,6 +4,14 @@
 
 @media (min-width: 1040px) {
 
+  .header-in{
+    display: flex;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
   .header{
     display: flex;
     width: 100%;
@@ -12,14 +20,6 @@
 
   .header input{
     display: none;
-  }
-
-  .headerInner{
-    display: flex;
-    padding: 0;
-    width: 100%;
-    align-items: center;
-    flex-wrap: wrap;
   }
 
   .header ul{
@@ -149,7 +149,7 @@
   {
     position: absolute;
     width: 300px;
-    margin: -100px 0 0 -50px;
+    margin: -100px 0 0 -90px;
     padding: 50px;
     padding-top: 125px;
 
