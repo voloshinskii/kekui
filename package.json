@@ -1,6 +1,6 @@
 {
   "name": "@voloshinskii/kekui",
-  "version": "1.4.4-3",
+  "version": "1.4.4-4",
   "main": "dist/index.js",
   "repository": {
     "type" : "git",
