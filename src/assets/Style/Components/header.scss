@@ -171,10 +171,12 @@
   }
 
   .paranja{
-    z-index: 999;
     background: rgba(0,0,0,.6);
     transition: opacity .1s ease-out;
     transition-delay: .05s;
+
+    visibility: hidden;
+    opacity: 0;
   }
 
   .header input:checked ~ .paranja{
