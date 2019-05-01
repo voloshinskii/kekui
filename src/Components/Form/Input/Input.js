@@ -32,6 +32,12 @@ export default class Input extends Component {
     type: PropTypes.string,
     /** Theme style */
     theme: PropTypes.oneOf(['dark', 'light']),
+    /** Input error text */
+    error: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.element
+    ]),
   }
   static defaultProps = {
     className: null,
@@ -52,6 +58,7 @@ export default class Input extends Component {
                     type={this.props.type}
                     theme={this.props.theme}
         />
+        <div className="error">{this.props.error}</div>
         </div>
     );
   }
