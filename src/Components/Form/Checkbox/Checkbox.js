@@ -8,8 +8,12 @@ import RawInput from '../RawInput/RawInput';
 
 export default class Checkbox extends Component {
   static propTypes = {
-    /** Checkbox label */
-    label: PropTypes.string,
+    /** Checkbox label. You can pass string, number or element */
+    label: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.element
+    ]),
     /** Default React className */
     className: PropTypes.string,
     /** Component id */
