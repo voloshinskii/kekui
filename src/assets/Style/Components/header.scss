@@ -11,6 +11,14 @@
   font-size: 120%;
 }
 
+.paranja{
+  position: fixed;
+  top: -100%;
+  right: -100%;
+  bottom: -100%;
+  left: -100%;
+}
+
 @media (min-width: 1040px) {
 
   .header-in{
@@ -82,7 +90,7 @@
     position: relative;
     top: 25px;
     left: 15px;
-    z-index: 1;
+    z-index: 1000;
     -webkit-user-select: none;
     user-select: none;
     margin-bottom: 55px;
@@ -162,13 +170,27 @@
     transform: rotate(-45deg) translate(0, -1px);
   }
 
+  .paranja{
+    z-index: 999;
+    background: rgba(0,0,0,.6);
+    transition: opacity .1s ease-out;
+    transition-delay: .05s;
+  }
+
+  .header input:checked ~ .paranja{
+    visibility: visible;
+    opacity: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    transition: opacity .3s ease-out;
+  }
+
   .header-in
   {
     position: absolute;
-    width: 1000px;
     margin: -100px 0 0 -120px;
     padding: 100px;
     padding-top: 125px;
+    height: 2000px;
 
     background: #ededed;
     list-style-type: none;

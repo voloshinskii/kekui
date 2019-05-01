@@ -29,6 +29,7 @@ export default class Header extends Component {
     return (
       <div className={`header ${this.props.className}`}>
         <input type="checkbox" />
+        <div className="paranja"/>
         <div className="span-holder">
           <span></span>
           <span style={{marginBottom:"-22px"}}></span>
