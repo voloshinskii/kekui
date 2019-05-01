@@ -78,7 +78,7 @@ label{
   --------------*/
 
 @mixin InputType($color) {
-  background-color: transparentize($color, 0.25);
+  border: 1.4px solid transparentize($color, 0.25);
 }
 
 .input.error{
