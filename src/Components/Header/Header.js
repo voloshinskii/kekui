@@ -29,7 +29,7 @@ export default class Header extends Component {
         <input type="checkbox" />
         <div className="span-holder">
           <span></span>
-          <span></span>
+          <span style={{marginBottom:"-22px"}}></span>
           <span></span>
         </div>
         <ul className="header-in">
