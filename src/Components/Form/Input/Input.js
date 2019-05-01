@@ -9,7 +9,11 @@ import RawInput from '../RawInput/RawInput';
 export default class Input extends Component {
   static propTypes = {
     /** Input label */
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.element
+    ]),
     /** Default React className */
     className: PropTypes.string,
     /** Component id */

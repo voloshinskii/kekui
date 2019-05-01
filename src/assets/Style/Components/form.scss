@@ -20,7 +20,7 @@
 }
 
 .field{
-  @extend .m-15;
+  @extend .m-25;
 }
 
 .field.m-0{
@@ -37,7 +37,6 @@ label{
 @for $i from 2 through 4 {
   .fields.i-#{$i} {
     @extend .flexrow;
-    @extend .m-15;
     & .field{
       width: (100% - 5%) / $i;
     }
