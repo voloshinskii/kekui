@@ -1,31 +1,5 @@
 import React, { Component } from 'react';
 
-class FewInputs extends Component {
-
-  constructor(props) {
-        super(props);
-        this.renderInputs = this.renderInputs.bind(this);
-    }
-
-  renderInputs(){
-     const inputslist = this.props.inputs.map((input, index) =>
-        <div className="field" key={index} >{input}</div>
-     );
-     return(inputslist);
-  }
-
-  render() {
-    return (
-      <div>
-        <label>{this.props.label}</label>
-        <div className={`fields i-${this.props.count}`}>
-          {this.renderInputs()}
-        </div>
-      </div>
-    );
-  }
-
-}
 
 class RawButton extends Component {
 
@@ -51,7 +25,6 @@ class Button extends Component {
 }
 
 export {
-  FewInputs,
   Button,
   RawButton
 }

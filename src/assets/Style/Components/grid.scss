@@ -7,20 +7,24 @@
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
   &.form-banner{
-    grid-template-columns: 1fr 450px;
+    grid-template-columns: 1fr 550px;
   }
   &.form-banner-reversed{
-    grid-template-columns: 450px 1fr;
+    grid-template-columns: 550px 1fr;
   }
   &.featured-sales{
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width: 1040px) {
-  .grid.form-banner {
+@media (max-width: 1350px) {
+  .grid.form-banner, .grid.form-banner-reversed {
     grid-template-columns: 1fr;
   }
+
+}
+
+@media (max-width: 1040px) {
   .grid.featured-sales {
     grid-template-columns: 1fr;
   }

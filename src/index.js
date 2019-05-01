@@ -9,6 +9,7 @@ export { default as Table} from './Components/Table/Table';
 
 export { default as Form} from './Components/Form/Form/Form';
 export { default as Input} from './Components/Form/Input/Input';
+export { default as FewInputs} from './Components/Form/FewInputs/FewInputs';
 export { default as RawInput} from './Components/Form/RawInput/RawInput';
 export { default as Checkbox} from './Components/Form/Checkbox/Checkbox';
 
@@ -18,11 +19,11 @@ export { default as NavLink} from './Components/Header/NavLink';
 export { default as Grid} from './Components/Grid/Grid';
 
 import {DisplayCenter, Block, Content} from './Components/Main';
-import {FewInputs, Button, RawButton} from './Components/Form';
+import {Button, RawButton} from './Components/Form';
 import {H1, H2, H3, H4, H5, H6} from './Components/TextStyling';
 
 export {
-  FewInputs, Button, RawButton,
+  Button, RawButton,
   DisplayCenter, Block, Content,
   H1, H2, H3, H4, H5, H6
 };
