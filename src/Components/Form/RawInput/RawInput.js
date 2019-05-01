@@ -24,6 +24,8 @@ export default class RawInput extends Component {
     value: PropTypes.string,
     /** onChange function */
     onChange: PropTypes.func,
+    /** onBlur function */
+    onBlur: PropTypes.func,
     /** Input placeholder */
     placeholder: PropTypes.string,
     /** Input type */
@@ -37,6 +39,7 @@ export default class RawInput extends Component {
     theme: 'dark'
   }
 
+
   render() {
     return (
       <div>
@@ -45,6 +48,7 @@ export default class RawInput extends Component {
                name={this.props.name}
                value={this.props.value}
                onChange={this.props.onChange}
+               onBlur={this.props.onBlur}
                className={`input ${this.props.className} ${this.props.theme}`}
                placeholder={this.props.placeholder}
                type={this.props.type}/>

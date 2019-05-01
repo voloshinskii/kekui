@@ -24,6 +24,8 @@ export default class Input extends Component {
     value: PropTypes.string,
     /** onChange function */
     onChange: PropTypes.func,
+    /** onBlur function */
+    onBlur: PropTypes.func,
     /** Input placeholder */
     placeholder: PropTypes.string,
     /** Input type */
@@ -44,10 +46,12 @@ export default class Input extends Component {
                     name={this.props.name}
                     value={this.props.value}
                     onChange={this.props.onChange}
+                    onBlur={this.props.onBlur}
                     className={this.props.className}
                     placeholder={this.props.placeholder}
                     type={this.props.type}
-                    theme={this.props.theme}/>
+                    theme={this.props.theme}
+        />
         </div>
     );
   }
