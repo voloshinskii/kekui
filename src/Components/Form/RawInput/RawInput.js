@@ -32,6 +32,12 @@ export default class RawInput extends Component {
     type: PropTypes.string,
     /** Theme style */
     theme: PropTypes.oneOf(['dark', 'light']),
+    /** Input error text */
+    error: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.element
+    ]),
   }
 
   static defaultProps = {
@@ -51,7 +57,9 @@ export default class RawInput extends Component {
                onBlur={this.props.onBlur}
                className={`input ${this.props.className} ${this.props.theme}`}
                placeholder={this.props.placeholder}
-               type={this.props.type}/>
+               type={this.props.type}
+               error={this.props.error}
+        />
       </div>
     );
   }
