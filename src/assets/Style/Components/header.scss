@@ -1,55 +1,224 @@
 .header{
-  display: flex;
-  width: 100%;
-  height: 60px;
   @extend .m-25;
 }
 
-.headerInner{
-  display: flex;
-  padding: 0;
-  width: 100%;
-  align-items: center;
-  flex-wrap: wrap;
+.header .logo{
+  margin: 1em 20px 1em 0;
+  display: inline-block;
+  font-weight: bold;
+  width: auto;
+  height: 18px;
+  font-size: 120%;
 }
 
-.header ul{
-  list-style: none;
-  color: $color_WS;
+.paranja{
+  position: fixed;
+  top: -100%;
+  right: -100%;
+  bottom: -100%;
+  left: -100%;
 }
 
-body.light .header ul{
-  color: black;
-}
+@media (min-width: 1040px) {
 
-.navbar{
-  padding: 0;
-  display: flex;
-  & li{
-    margin-right: 35px;
+  .paranja{
+    visibility: hidden;
   }
 
-  & li:last-child{
-    margin-right: 0;
+  .header-in{
+    display: flex;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
-  &.right{
-    margin-left: auto;
+  .header{
+    display: flex;
+    width: 100%;
+    height: 60px;
   }
-}
 
-.header a{
-  text-decoration: none;
-  color: #d4d4d5;
-  transition: 0.2s;
-  &:hover{
+  .header input{
+    display: none;
+  }
+
+  .header ul{
+    list-style: none;
     color: $color_WS;
-    transition: 0.2s
   }
-  body.light &{
-    color: #0000008a;
-  }
-  body.light &:hover{
+
+  body.light .header ul{
     color: black;
   }
+
+  .navbar{
+    padding: 0;
+    display: flex;
+    & li{
+      margin-right: 35px;
+    }
+
+    & li:last-child{
+      margin-right: 0;
+    }
+
+    &.right{
+      margin-left: auto;
+    }
+  }
+
+  .header a{
+    text-decoration: none;
+    color: #d4d4d5;
+    transition: 0.2s;
+    &:hover{
+      color: $color_WS;
+      transition: 0.2s
+    }
+    body.light &{
+      color: #0000008a;
+    }
+    body.light &:hover{
+      color: black;
+    }
+  }
+
+}
+
+@media (max-width: 1040px) {
+
+  .header
+  {
+    display: block;
+    position: relative;
+    top: 25px;
+    left: 15px;
+    z-index: 1000;
+    -webkit-user-select: none;
+    user-select: none;
+    margin-bottom: 55px;
+  }
+
+  .header input
+  {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    z-index: 2;
+
+    -webkit-touch-callout: none;
+  }
+
+  .header .logo{
+    margin: 0;
+  }
+
+  .span-holder{
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .header .span-holder span
+  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+
+  .header .span-holder span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
+
+  .header .span-holder span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
+
+  .header input:checked ~ .span-holder span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  .header input:checked ~ .span-holder span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  .header input:checked ~ .span-holder span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  .paranja{
+    background: rgba(0,0,0,.6);
+    transition: opacity .1s ease-out;
+    transition-delay: .05s;
+
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .header input:checked ~ .paranja{
+    visibility: visible;
+    opacity: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    transition: opacity .3s ease-out;
+  }
+
+  .header-in
+  {
+    position: absolute;
+    margin: -100px 0 0 -120px;
+    padding: 100px;
+    padding-top: 125px;
+    height: 2000px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+  .navbar li
+  {
+    padding: 10px 0;
+  }
+
+  .navbar{
+    list-style-type: none;
+  }
+
+  .header input:checked ~ ul
+  {
+    transform: none;
+  }
+
 }

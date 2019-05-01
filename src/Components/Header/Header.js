@@ -13,6 +13,8 @@ export default class Header extends Component {
   static propTypes = {
     /** children */
     children: PropTypes.any,
+    /** Logo */
+    logo: PropTypes.any,
     /** Default React className */
     className: PropTypes.string,
     /** Theme style */
@@ -26,9 +28,19 @@ export default class Header extends Component {
   render() {
     return (
       <div className={`header ${this.props.className}`}>
-        <header className="headerInner">
+        <input type="checkbox" />
+        <div className="paranja"/>
+        <div className="span-holder">
+          <span></span>
+          <span style={{marginBottom:"-22px"}}></span>
+          <span></span>
+        </div>
+        <span className="logo">
+          {this.props.logo}
+        </span>
+        <ul className="header-in">
           {this.props.children}
-        </header>
+        </ul>
       </div>
     );
   }
