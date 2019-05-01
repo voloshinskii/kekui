@@ -1,14 +1,5 @@
 import React, { Component } from 'react';
 
-
-
-const Form = ({className, children}) => (
-  <div className={`form default-style ${ className }`}>
-      {children}
-  </div>
-);
-
-
 class FewInputs extends Component {
 
   constructor(props) {
@@ -62,6 +53,5 @@ class Button extends Component {
 export {
   FewInputs,
   Button,
-  RawButton,
-  Form
+  RawButton
 }
