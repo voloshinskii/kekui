@@ -29,14 +29,14 @@ export default class Header extends Component {
     return (
       <div className={`header ${this.props.className}`}>
         <input type="checkbox" />
-        <span className="logo">
-          {this.props.logo}
-        </span>
         <div className="span-holder">
           <span></span>
           <span style={{marginBottom:"-22px"}}></span>
           <span></span>
         </div>
+        <span className="logo">
+          {this.props.logo}
+        </span>
         <ul className="header-in">
           {this.props.children}
         </ul>

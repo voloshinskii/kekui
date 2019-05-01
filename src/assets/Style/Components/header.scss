@@ -3,10 +3,12 @@
 }
 
 .header .logo{
-  margin: 1em 0;
+  margin: 1.2em 20px 1.2em 0;
   display: inline-block;
   font-weight: bold;
   width: auto;
+  height: 18px;
+  font-size: 120%;
 }
 
 @media (min-width: 1040px) {
