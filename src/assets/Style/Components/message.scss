@@ -25,15 +25,15 @@
 
 /*  Types */
 
-.body.light .message.error, .message.light.error{
+body.light .message.error, .message.light.error{
   @include MessageType($color_CP, black);
 }
 
-.body.light .message.success, .message.light.success{
+body.light .message.success, .message.light.success{
   @include MessageType($color_LG, black);
 }
 
-.body.light .message.warning, .message.light.warning{
+body.light .message.warning, .message.light.warning{
   @include MessageType($color_LY, black);
 }
 

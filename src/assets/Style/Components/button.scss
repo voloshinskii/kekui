@@ -4,6 +4,10 @@
 @mixin buttonColored($color, $tcolor) {
  background: $color;
  color: $tcolor;
+ &.disabled{
+    background: darken($color, 20%);
+  }
+
 }
 
 @mixin buttonHover($color) {
@@ -61,9 +65,9 @@
   margin-left: auto;
 }
 
-/*--------------
-      Jewel
-  --------------*/
+  /*--------------
+        Jewel
+    --------------*/
 
 .button.jewel{
   @include buttonColored($color_JWL, white);
@@ -71,58 +75,70 @@
 }
 
 
-/*--------------
-      Pink
-  --------------*/
+  /*--------------
+        Pink
+    --------------*/
 
 .button.pink{
   @include buttonColored($color_CP, white);
   @include buttonHover($color_CP);
 }
 
-/*--------------
-    Light-blue
-  --------------*/
+  /*--------------
+      Light-blue
+    --------------*/
 
 .button.light-blue{
   @include buttonColored($color_LBB, white);
   @include buttonHover($color_LBB);
 }
 
-/*--------------
-   Light-green
-  --------------*/
+  /*--------------
+     Light-green
+    --------------*/
 
 .button.light-green{
   @include buttonColored($color_LG, white);
   @include buttonHover($color_LG);
 }
 
-/*--------------
-      Purple
-  --------------*/
+  /*--------------
+        Purple
+    --------------*/
 
 .button.purple{
   @include buttonColored($color_MRP, white);
   @include buttonHover($color_MRP);
 }
 
-/*--------------
-   Light-yellow
-  --------------*/
+  /*--------------
+     Light-yellow
+    --------------*/
 
 .button.light-yellow{
   @include buttonColored($color_LY, black);
   @include buttonHover($color_LY);
 }
 
+  /*--------------
+        SIZES
+    --------------*/
 
-/*--------------
-      SIZES
-  --------------*/
+.button.big{
+  font-size: 20px;
+}
 
-  .button.big{
-    font-size: 20px;
-  }
+  /*--------------
+       DISABLED
+    --------------*/
+
+.button.disabled{
+  cursor: default;
+  opacity: .75!important;
+  background-image: none!important;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+  pointer-events: none!important;
+}
 
 /* BUTTON END */

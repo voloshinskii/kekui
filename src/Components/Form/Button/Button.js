@@ -23,6 +23,8 @@ export default class Button extends Component {
     position: PropTypes.oneOf(['left', 'right']),
     /** Button border */
     border: PropTypes.bool,
+    /** Button state: disabled or not */
+    disabled: PropTypes.bool
   }
   static defaultProps = {
     className: null,
@@ -34,7 +36,7 @@ export default class Button extends Component {
     return (
         <div className="field flex">
           <RawButton border={this.props.border}
-                     className={`${this.props.className} ${this.props.position} ${this.props.color}`}
+                     className={`${this.props.className} ${this.props.position} ${this.props.color} ${this.props.disabled && 'disabled'}`}
                      value={this.props.value}
                      onClick={this.props.onClick}
           />
