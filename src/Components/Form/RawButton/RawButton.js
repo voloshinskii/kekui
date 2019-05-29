@@ -23,15 +23,15 @@ export default class RawButton extends Component {
   static defaultProps = {
     className: null,
     theme: 'dark',
-    style: 'default-style',
+    template: 'default-style',
     border: true
   }
 
 
   render() {
-    const { className, theme, color, border, ...restProps } = this.props;
+    const { template, className, theme, color, border, ...restProps } = this.props;
     return (
-        <input className={ `button ${ className } ${ theme } ${ color } ${ !border && 'dis-border' } ` }
+        <input className={ `button ${ className } ${ theme } ${ color } ${ !border && 'dis-border' } ${ template } ` }
                type="submit"
                { ...restProps }
         />
