@@ -21,10 +21,12 @@ export default class ProgressBar extends Component {
   }
 
   render() {
+    const { className, theme, progress, style,  ...restProps } = this.props;
     return (
-        <div className={`progress-bar ${this.props.className} ${this.props.theme}`}>
+        <div className={`progress-bar ${ className } ${ theme }`}>
           <div className="progress"
-               style={{'width': `${this.props.progress}%`}}
+               style={{ 'width': `${ progress }%`, ...style }}
+               { ...restProps }
           />
         </div>
     );

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import RawInput from '../RawInput/RawInput';
 
 /**
  * Checkbox
@@ -52,16 +51,16 @@ export default class Checkbox extends Component {
   }
 
   render() {
+    const { label, color, theme, className, style, ...restProps } = this.props;
     return (
-      <div className={`field checkbox ${this.props.color} ${this.props.theme} ${this.props.className}`}>
+      <div className={`field checkbox ${ color } ${ theme } ${ className }`}>
         <input
           id={this.state.id}
           type="checkbox"
-          style={{display: "none"}}
-          checked={this.props.checked}
-          onChange={this.props.onChange}
+          style={{ display: 'none', ...style }}
+          { ...restProps }
         />
-        <label htmlFor={this.state.id}>{this.props.label}</label>
+        <label htmlFor={ this.state.id }>{ label }</label>
       </div>
     );
   }

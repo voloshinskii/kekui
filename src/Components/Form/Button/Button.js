@@ -29,16 +29,21 @@ export default class Button extends Component {
   static defaultProps = {
     className: null,
     theme: 'dark',
-    border: true,
+    border: false,
   }
 
   render() {
+    const { className, position, color, disabled, ...restProps } = this.props;
     return (
         <div className="field flex">
-          <RawButton border={this.props.border}
-                     className={`${this.props.className} ${this.props.position} ${this.props.color} ${this.props.disabled && 'disabled'}`}
-                     value={this.props.value}
-                     onClick={this.props.onClick}
+            <RawButton
+                className= {`
+                    ${ className }
+                    ${ position }
+                    ${ color }
+                    ${ disabled && 'disabled' }
+                `}
+                { ...restProps }
           />
         </div>
     );

@@ -23,10 +23,11 @@ export default class Message extends Component {
   }
 
   render() {
+    const { className, theme, type, text, children, ...restProps } = this.props;
     return (
-        <div className={`message ${this.props.className} ${this.props.theme} ${this.props.type}`}>
-          {this.props.text && <p>{this.props.text}</p>}
-          {this.props.children && this.props.children}
+        <div className={ `message ${ className } ${ theme } ${ type }` } { ...restProps }>
+          { text && <p>{ text }</p> }
+          { children }
         </div>
     );
   }

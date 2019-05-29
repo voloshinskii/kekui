@@ -29,11 +29,11 @@ export default class RawButton extends Component {
 
 
   render() {
+    const { className, theme, color, border, ...restProps } = this.props;
     return (
-        <input className={`button ${this.props.className} ${this.props.theme} ${this.props.color} ${ !this.props.border && 'dis-border' }`}
-               value={this.props.value}
-               onClick={this.props.onClick}
+        <input className={ `button ${ className } ${ theme } ${ color } ${ !border && 'dis-border' } ` }
                type="submit"
+               { ...restProps }
         />
     );
   }

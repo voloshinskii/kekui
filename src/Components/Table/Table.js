@@ -32,48 +32,39 @@ export default class Table extends Component {
 
   componentDidMount(){
     var headers = this.props.headers.map((header, index) =>
-      <th key={`table-header-${index}`}>{header}</th>
+      <th key={ `table-header-${ index }` }>{ header }</th>
     );
 
-    var content =
-      this.props.content.map((content, index) =>
-        <tr key={`table-tr-${index}`}>
+    this.setState({ headers: headers });
+
+  }
+
+  renderContent(content){
+    return(
+      content.map((content, index) =>
+        <tr key={ `table-tr-${index}` }>
           {
             content.map((item, index) =>
               <td key={`table-td-${index}`}>
-                {item}
+                { item }
               </td>
             )
           }
         </tr>
-      );
-
-    this.setState({headers: headers, content: content});
-
-  }
+      )
+   )}
 
   render() {
+    const { theme, content, className, ...restProps } = this.props;
     return (
-      <table className={`table ${this.props.theme}`}>
+      <table className={ `table ${ theme } ${ className }` } { ...restProps }>
         <thead>
           <tr>
             { this.state.headers && this.state.headers }
           </tr>
         </thead>
         <tbody>
-          {
-            this.props.content.map((content, index) =>
-              <tr key={`table-tr-${index}`}>
-                {
-                  content.map((item, index) =>
-                    <td key={`table-td-${index}`}>
-                      {item}
-                    </td>
-                  )
-                }
-              </tr>
-            )
-          }
+          { this.renderContent(content) }
         </tbody>
       </table>
     );

@@ -18,9 +18,10 @@ export default class Navbar extends Component {
   }
 
   render() {
+    const { className, position, children, ...restProps } = this.props;
     return (
-      <ul className={`navbar ${ this.props.className } ${ this.props.position }`}>
-          {this.props.children}
+      <ul className={ `navbar ${ className } ${ position }` } { ...restProps }>
+          { children }
       </ul>
     );
   }

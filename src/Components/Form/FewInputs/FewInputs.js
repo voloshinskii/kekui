@@ -31,11 +31,12 @@ export default class FewInputs extends Component {
   }
 
   render() {
+    const { label, inputs, ...restProps } = this.props;
     return (
       <div>
-        <label>{this.props.label}</label>
-        <div className={`fields i-${this.props.inputs.length}`}>
-          {this.renderInputs()}
+        <label>{ label }</label>
+        <div { ...restProps } className={ `fields i-${this.props.inputs.length}` }>
+          { this.renderInputs() }
         </div>
       </div>
     );

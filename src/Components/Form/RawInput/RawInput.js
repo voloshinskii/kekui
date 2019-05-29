@@ -47,19 +47,12 @@ export default class RawInput extends Component {
 
 
   render() {
+    const { label, className, theme, error, ...restProps } = this.props;
     return (
       <div>
-        <label>{this.props.label}</label>
-        <input id={this.props.id}
-               name={this.props.name}
-               value={this.props.value}
-               onChange={this.props.onChange}
-               onBlur={this.props.onBlur}
-               className={`input ${this.props.className} ${this.props.theme}`}
-               placeholder={this.props.placeholder}
-               type={this.props.type}
-        />
-      <div className="error-text">{this.props.error}</div>
+        <label>{ label }</label>
+        <input className={ `input ${ className } ${ theme }` } { ...restProps } />
+        <div className="error-text">{ error }</div>
       </div>
     );
   }

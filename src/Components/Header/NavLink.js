@@ -19,10 +19,11 @@ export default class NavLink extends Component {
   }
 
   render() {
+    const { children, ...restProps } = this.props;
     return (
       <li>
-        <a href={this.props.href}>
-          {this.props.children}
+        <a { ...restProps }>
+          { children }
         </a>
       </li>
     );
