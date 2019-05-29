@@ -13,19 +13,20 @@ export default class Form extends Component {
     children: PropTypes.any,
     /** Theme style */
     theme: PropTypes.oneOf(['dark', 'light']),
-    /** Style */
-    style: PropTypes.oneOf(['default-style']),
+    /** Template name */
+    template: PropTypes.oneOf(['default-style']),
   }
   static defaultProps = {
     className: null,
     theme: 'dark',
-    style: 'default-style'
+    template: 'default-style'
   }
 
   render() {
+    const { template, className, children, ...restProps } = this.props;
     return (
-      <div className={`form ${this.props.style} ${this.props.className}`}>
-          {this.props.children}
+      <div className={ `form ${ template } ${ className }` } { ...restProps }>
+          { children }
       </div>
     );
   }

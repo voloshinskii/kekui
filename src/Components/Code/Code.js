@@ -21,9 +21,10 @@ export default class Code extends Component {
   }
 
   render() {
+    const { color, theme, className, children, ...restProps } = this.props;
     return (
-      <code className={`code ${this.props.color} ${this.props.theme} ${this.props.className}`}>
-        {this.props.children}
+      <code className={ `code ${ color } ${ theme } ${ className }` } { ...restProps }>
+        {children}
       </code>
     );
   }

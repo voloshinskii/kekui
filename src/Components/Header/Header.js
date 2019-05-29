@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 
-
-import Navbar from './Navbar';
-import NavLink from './NavLink';
-
 /**
  * Header component.
  */
@@ -26,20 +22,21 @@ export default class Header extends Component {
   }
 
   render() {
+    const { className, logo, children, ...restProps } = this.props;
     return (
-      <div className={`header ${this.props.className}`}>
+      <div className={ `header ${ className }` } { ...restProps } >
         <input type="checkbox" />
-        <div className="paranja"/>
+        <div className="paranja" />
         <div className="span-holder">
           <span></span>
-          <span style={{marginBottom:"-22px"}}></span>
+          <span style={{ marginBottom: '-22px' }}></span>
           <span></span>
         </div>
         <span className="logo">
-          {this.props.logo}
+          { logo }
         </span>
         <ul className="header-in">
-          {this.props.children}
+          { children }
         </ul>
       </div>
     );

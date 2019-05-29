@@ -1,5 +1,5 @@
 RawInput example:
 
 ```js
-<RawInput/>
+<RawInput />
 ```

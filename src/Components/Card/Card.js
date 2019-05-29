@@ -23,9 +23,13 @@ export default class Card extends Component {
   }
 
   render() {
+    const { children, shadow, theme, color, className, ...restProps } = this.props;
     return (
-      <div className={`card ${ this.props.shadow && 'withshadow' } ${this.props.theme} ${this.props.color} ${this.props.className}`}>
-          {this.props.children}
+      <div
+        className={` card ${ shadow && 'withshadow' } ${ theme } ${ color } ${ className } `}
+        { ...restProps }
+      >
+        { children }
       </div>
     );
   }

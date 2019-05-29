@@ -38,6 +38,8 @@ export default class Input extends Component {
       PropTypes.number,
       PropTypes.element
     ]),
+    /** Additional props for error div */
+    errorRestProps: PropTypes.object,
   }
   static defaultProps = {
     className: null,
@@ -45,20 +47,12 @@ export default class Input extends Component {
   }
 
   render() {
+    const { label, error, errorRestProps, ...restProps } = this.props;
     return (
         <div className="field">
-          <label>{this.props.label}</label>
-          <RawInput id={this.props.id}
-                    name={this.props.name}
-                    value={this.props.value}
-                    onChange={this.props.onChange}
-                    onBlur={this.props.onBlur}
-                    className={this.props.className}
-                    placeholder={this.props.placeholder}
-                    type={this.props.type}
-                    theme={this.props.theme}
-        />
-        <div className="error-text">{this.props.error}</div>
+          <label>{ label }</label>
+          <RawInput { ...restProps } />
+        <div className="error-text" { ...errorRestProps } >{ error }</div>
         </div>
     );
   }

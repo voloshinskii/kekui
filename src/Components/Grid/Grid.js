@@ -21,9 +21,10 @@ export default class Grid extends Component {
   }
 
   render() {
+    const { className, theme, type, children, ...restProps } = this.props;
     return (
-        <div className={`grid ${this.props.className} ${this.props.theme} ${this.props.type}`}>
-          {this.props.children}
+        <div className={ `grid ${ className } ${ theme } ${ type }` } { ...restProps }>
+          { children }
         </div>
     );
   }
