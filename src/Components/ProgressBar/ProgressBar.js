@@ -12,19 +12,24 @@ export default class ProgressBar extends Component {
     /** Default React className */
     className: PropTypes.string,
     /** Progress in percent */
-    progress: PropTypes.number
+    progress: PropTypes.number,
+    /** ProgressBar height */
+    height: PropTypes.number,
+    /** ProgressBar animated color change */
+    colored: PropTypes.bool
   }
   static defaultProps = {
     className: null,
     theme: 'dark',
-    progress: 0
+    progress: 0,
+    height: 14
   }
 
   render() {
-    const { className, theme, progress, style,  ...restProps } = this.props;
+    const { height, colored, className, theme, progress, style,  ...restProps } = this.props;
     return (
-        <div className={`progress-bar ${ className } ${ theme }`}>
-          <div className="progress"
+        <div className={`progress-bar ${ colored && 'colored' } ${ className } ${ theme }`} style={{ height: height }}>
+          <div className={`progress step-${ Math.floor(progress/20) }`}
                style={{ 'width': `${ progress }%`, ...style }}
                { ...restProps }
           />

@@ -22,9 +22,9 @@ export default class Header extends Component {
   }
 
   render() {
-    const { className, logo, children, ...restProps } = this.props;
+    const { className, theme, logo, children, ...restProps } = this.props;
     return (
-      <div className={ `header ${ className }` } { ...restProps } >
+      <div className={ `header ${ className } ${ theme }` } { ...restProps }>
         <input type="checkbox" />
         <div className="paranja" />
         <div className="span-holder">
