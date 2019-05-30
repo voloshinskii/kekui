@@ -19,6 +19,13 @@
   left: -100%;
 }
 
+.header.light a, body.light a{
+  color: #0000008a;
+}
+.header.light a:hover, body.light a:hover{
+  color: black;
+}
+
 @media (min-width: 1040px) {
 
   .paranja{
@@ -75,12 +82,6 @@
     &:hover{
       color: $color_WS;
       transition: 0.2s
-    }
-    body.light &{
-      color: #0000008a;
-    }
-    body.light &:hover{
-      color: black;
     }
   }
 

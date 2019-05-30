@@ -1,7 +1,9 @@
 ```js
-import {Navbar} from './Navbar';
-import {NavLink} from './NavLink';
-<Header>
+import Navbar from './Navbar';
+import NavLink from './NavLink';
+import Header from './Header';
+
+<Header theme="light">
   <Navbar position="left">
     <NavLink href="/">Главная</NavLink>
     <NavLink href="/">Курсы</NavLink>
