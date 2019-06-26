@@ -25,6 +25,9 @@ export { default as Navbar} from './Components/Header/Navbar';
 export { default as NavLink} from './Components/Header/NavLink';
 export { default as Grid} from './Components/Grid/Grid';
 
+export { default as Step} from './Components/Step/Step';
+
+
 import {DisplayCenter, Block, Content} from './Components/Main';
 import {H1, H2, H3, H4, H5, H6} from './Components/TextStyling';
 

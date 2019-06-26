@@ -1,6 +1,6 @@
 {
   "name": "@voloshinskii/kekui",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "main": "dist/index.js",
   "repository": {
     "type" : "git",
@@ -15,7 +15,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "babel-eslint": "^10.0.1",
@@ -31,9 +31,7 @@
     "resolve-from": "^5.0.0",
     "sass-resources-loader": "^2.0.0",
     "style-loader": "^0.23.1",
-    "url-loader": "^1.1.2"
-  },
-  "devDependencies": {
+    "url-loader": "^1.1.2",
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
