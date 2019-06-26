@@ -29,11 +29,13 @@ export default class Step extends Component {
         <div className={`step ${ className } ${ theme }`}>
           { children }
           {!children &&
-            <div className="title">
-              { title }
-            </div>
-            <div className="description">
-              { description }
+            <div>
+              <div className="title">
+                { title }
+              </div>
+              <div className="description">
+                { description }
+              </div>
             </div>
         }
         </div>
