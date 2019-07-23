@@ -5,7 +5,7 @@ import spinner from '../../../assets/Style/Images/spinner.svg'
 /**
  * RawButton component.
  */
-const spin = <img alt="loading" src={spinner}/>;
+const spin = <img style={{height: '11px'}} alt="loading" src={spinner}/>;
 export default class RawButton extends Component {
   static propTypes = {
     /** Default React className */
