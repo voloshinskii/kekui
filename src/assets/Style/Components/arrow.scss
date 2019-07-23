@@ -3,7 +3,17 @@
   transition: 0.5s;
 }
 
+.arrow-container:hover .arrow.hover{
+  transform: translate(6px, 0px);
+  color: $color_primary;
+}
+
 .arrow.to-right{
   transform: rotate(-90deg);
   transition: 0.5s;
+}
+
+.arrow-container:hover .arrow.to-right.hover{
+  transform: rotate(-90deg) translate(0, 6px);
+  color: $color_primary;
 }

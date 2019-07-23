@@ -50,7 +50,9 @@ export default class Input extends Component {
     const { label, error, errorRestProps, ...restProps } = this.props;
     return (
         <div className="field">
-          <label>{ label }</label>
+          { label &&
+            <label>{label}</label>
+          }
           <RawInput { ...restProps } />
         <div className="error-text" { ...errorRestProps } >{ error }</div>
         </div>

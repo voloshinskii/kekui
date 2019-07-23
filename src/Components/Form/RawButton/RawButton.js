@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import spinner from '../../../assets/Style/Images/spinner.svg'
 
 /**
  * RawButton component.
  */
-
+const spin = <img alt="loading" src={spinner}/>;
 export default class RawButton extends Component {
   static propTypes = {
     /** Default React className */
@@ -19,6 +20,8 @@ export default class RawButton extends Component {
     onClick: PropTypes.func,
     /** Button border */
     border: PropTypes.bool,
+    /** show spinner */
+    loading: PropTypes.bool
   }
   static defaultProps = {
     className: null,
@@ -29,12 +32,28 @@ export default class RawButton extends Component {
 
 
   render() {
-    const { template, className, theme, color, border, ...restProps } = this.props;
+    const { div, template, value, loading, className, theme, color, border, ...restProps } = this.props;
     return (
-        <input className={ `button ${ className } ${ theme } ${ color } ${ !border && 'dis-border' } ${ template } ` }
-               type="submit"
-               { ...restProps }
-        />
+        <div>
+          {div &&
+            <div
+                className={`button ${loading && 'disabled'} ${className} ${theme} ${color} ${!border && 'dis-border'} ${template} `}
+                type="submit"
+                {...restProps}
+            >
+              {loading ? spin : value}
+            </div>
+          }
+          {!div &&
+            <button
+                className={`button ${loading && 'disabled'} ${className} ${theme} ${color} ${!border && 'dis-border'} ${template} `}
+                type="submit"
+                {...restProps}
+            >
+              {loading ? spin : value}
+            </button>
+          }
+        </div>
     );
   }
 }

@@ -1,7 +1,7 @@
 import './assets/Style/main.scss';
 import './assets/Style/demo.scss';
 
-export { default as Accordeon} from './Components/Accordeon';
+export { default as Accordeon } from './Components/Accordeon/Accordeon';
 export { default as Message} from './Components/Message/Message';
 export { default as ProgressBar} from './Components/ProgressBar/ProgressBar';
 export { default as Card} from './Components/Card/Card';

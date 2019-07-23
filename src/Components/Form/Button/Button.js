@@ -16,7 +16,7 @@ export default class Button extends Component {
     /** Theme style */
     theme: PropTypes.oneOf(['dark', 'light']),
     /** Button color */
-    color: PropTypes.oneOf(['jewel', 'pink', 'light-blue', 'light-green', 'purple', 'light-yellow']),
+    color: PropTypes.oneOf(['jewel', 'pink', 'light-blue', 'light-green', 'purple', 'light-yellow', 'primary', 'secondary']),
     /** onClick function */
     onClick: PropTypes.func,
     /** position */
@@ -24,7 +24,11 @@ export default class Button extends Component {
     /** Button border */
     border: PropTypes.bool,
     /** Button state: disabled or not */
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    /** show spinner */
+    loading: PropTypes.bool,
+    /** show as container */
+    div: PropTypes.bool
   }
   static defaultProps = {
     className: null,

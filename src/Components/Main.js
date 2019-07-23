@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import '../assets/Style/main.scss';
+import '../assets/Style/demo.scss';
 const Content = ({className, children}) => (
   <div className={`content ${ className }`}>
       {children}
